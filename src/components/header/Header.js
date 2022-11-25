@@ -1,12 +1,15 @@
 import React from "react";
 import "./Styles.scss";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleClick = () => navigate('/items');
   return (
     <header>
       <div className="container">
         <div className="div-img">
-          <img src={require("../assets/icons/meli-icono.jpg")} alt="Mercado Libre" />
+          <img src={require("../../assets/icons/meli-icono.jpg")} alt="Mercado Libre" />
         </div>
         <div className="div-input">
           <form>
@@ -14,7 +17,7 @@ const Header = () => {
           </form>
         </div>
         <div>
-          <button value={"buscar"}> Buscar</button>
+          <button value={"buscar"} onClick={handleClick} > Buscar</button>
         </div>
       </div>
     </header>
