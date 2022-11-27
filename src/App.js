@@ -1,16 +1,18 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import "./App.scss";
-import Home from './page/Home';
+import Header from "./components/header/Header";
+import DetalleProducto from "./page/Detalle-producto";
+import Resultado from "./page/Resultado";
 
 function App() {
   return (
-    <>    
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home/>} exact/>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/items" element={<Resultado />} exact />
+        <Route path="/items/:id" element={<DetalleProducto />} exact />
       </Routes>
-      </BrowserRouter>
-    </>
+    </BrowserRouter>
   );
 }
 
