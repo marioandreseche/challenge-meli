@@ -10,6 +10,9 @@ const Header = () => {
       state: inputValue,
     });
   };
+  const handleClickImg = () => {
+    navigate(`/`);
+  };
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
@@ -24,7 +27,11 @@ const Header = () => {
     <header>
       <div className="container">
         <div className="div-img">
-          <img src={require("../../assets/icons/meli-icono.jpg")} alt="Mercado Libre" />
+          <img
+            onClick={handleClickImg}
+            src={require("../../assets/icons/meli-icono.jpg")}
+            alt="Mercado Libre"
+          />
         </div>
         <div className="div-input">
           <form onSubmit={handleSubMit}>
