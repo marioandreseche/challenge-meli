@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import "./Styles.scss";
 
 const CardItem = ({item}) => {
+  console.log(item);
   const navigate = useNavigate();
   const onClickItem = (id) => {
     navigate(`/items/${id}`, {

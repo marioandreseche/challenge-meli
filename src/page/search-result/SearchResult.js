@@ -2,6 +2,7 @@ import React from "react";
 import {useLocation, useNavigate} from "react-router-dom";
 import CardItem from "../../components/card-item/CardItem";
 import {useFetchItems} from "../../hooks/useFetchItems";
+import BreadCrums from "../../components/breadcrums/BreadCrums";
 import "./Styles.scss";
 
 const SearchResult = () => {
@@ -17,9 +18,7 @@ const SearchResult = () => {
   if (!loading) {
     return (
       <>
-        <div className="div-categories">
-          <div className="tex-categories">Electronica Audio y Video : pod | Reproductores</div>
-        </div>
+        <BreadCrums />
         <div className="div-container">
           <div className="div-container-item">
             {data.items.map((item) => {

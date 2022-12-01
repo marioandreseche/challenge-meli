@@ -1,6 +1,7 @@
 import React from "react";
 import {useLocation} from "react-router-dom";
 import {useParams} from "react-router-dom";
+import BreadCrums from "../../components/breadcrums/BreadCrums";
 import {useFetchItemsById} from "../../hooks/useFetchItemById";
 import "./Styles.scss";
 
@@ -17,9 +18,7 @@ const ProductDetail = () => {
           alignItems: "center",
           flexDirection: "column",
         }}>
-        <div>
-          <p>Prueba - Prueba 2 </p>
-        </div>
+        <BreadCrums />
         <div
           style={{
             backgroundColor: "white",
