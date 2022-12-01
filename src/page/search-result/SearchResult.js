@@ -19,8 +19,8 @@ const SearchResult = () => {
     return (
       <>
         <BreadCrums />
-        <div className="div-container">
-          <div className="div-container-item">
+        <div className="container-search-result">
+          <div className="container-item">
             {data.items.map((item) => {
               return <CardItem key={item.id} item={item} />;
             })}

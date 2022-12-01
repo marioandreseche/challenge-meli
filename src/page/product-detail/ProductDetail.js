@@ -22,7 +22,7 @@ const ProductDetail = () => {
         <div
           style={{
             backgroundColor: "white",
-            width: "80%",
+            width: "70%",
             height: "100%",
           }}>
           <div>
